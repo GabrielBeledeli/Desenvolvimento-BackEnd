@@ -11,7 +11,11 @@
 
     @foreach($tarefas as $tarefa)
     <li class="list-group-item d-flex justify-content-between align-items-center">
-        {{ $tarefa->titulo }}
+        <div>
+            <h5>{{ $tarefa->titulo }}</h5>
+            <p>{{ $tarefa->descricao }}</p>
+            <small>Criado em: {{ $tarefa->created_at->format('d/m/Y H:i') }}</small>
+        </div>
         <div>
             <a href="{{ route('tarefas.show', $tarefa->id) }}" class="btn btn-sm btn-info">Ver</a>
 

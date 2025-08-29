@@ -7,6 +7,8 @@
 
 <p><strong>ID:</strong> {{ $tarefa->id }}</p>
 <p><strong>Título:</strong> {{ $tarefa->titulo }}</p>
+<p><strong>Descrição:</strong> {{ $tarefa->descricao }}</p>
+<p><strong>Criado em:</strong> {{ $tarefa->created_at->format('d/m/Y H:i') }}</p>
 
 <a href="{{ route('tarefas.index') }}" class="btn btn-secondary">Voltar</a>
 @endsection

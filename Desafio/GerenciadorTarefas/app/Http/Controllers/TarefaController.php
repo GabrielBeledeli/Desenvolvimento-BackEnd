@@ -9,7 +9,7 @@ class TarefaController extends Controller
 {
 	public function index()
 	{
-		$tarefas = Tarefa::all();
+		$tarefas = Tarefa::orderBy('created_at', 'desc')->get();
 		return view('tarefas.index', compact('tarefas'));
 	}
 
